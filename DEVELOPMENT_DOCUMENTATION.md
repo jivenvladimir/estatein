@@ -1,6 +1,8 @@
 # Estatein WordPress Theme - Development Documentation
 
-Hey there! This document walks through how I built the Estatein WordPress theme. I'll share my thought process, the decisions I made along the way, and how everything fits together. Hopefully this gives you a good sense of how the theme works and why I built it the way I did.
+Hey there! This document walks through how the Estatein WordPress theme is being built. I'll share the thought process, decisions made along the way, and how everything fits together. This should give you a good sense of how the theme works and why it's structured the way it is.
+
+**Important Note:** This theme is still in development. Some features like form submission functionality are not yet fully implemented, design fidelity with the Figma design is ongoing, and mobile views still need improvement. This document reflects the current state of the project.
 
 ---
 
@@ -206,25 +208,27 @@ The theme includes three Custom Post Types:
 
 **FAQs** - Frequently asked questions that show up on property detail pages. Each FAQ has a question and answer, and they're paginated nicely.
 
-### Forms That Actually Work
+### Forms
 
-I built two main forms:
+I've set up two main forms:
 
-**Contact Form** - Lives on the contact page. It validates all the inputs, sends emails properly, and shows success/error messages. It uses WordPress nonces for security, so it's protected against CSRF attacks.
+**Contact Form** - Lives on the contact page. The form structure is in place, but form submission functionality still needs to be fully implemented.
 
-**Property Inquiry Form** - Shows up on individual property pages. It's pre-filled with the property name, validates everything, and sends a nicely formatted email to the site admin. Users have to accept terms and conditions before submitting.
+**Property Inquiry Form** - Shows up on individual property pages. The form is pre-filled with the property name, but form submission functionality still needs to be fully implemented.
 
-Both forms handle errors gracefully and give users clear feedback about what went wrong (or that everything worked!).
+**Status:** Form structures are built, but backend submission handling needs to be completed. Once implemented, both forms should validate inputs, send emails, show success/error messages, and use WordPress nonces for CSRF protection.
 
-### Responsive Everywhere
+### Responsive Design (In Progress)
 
-The theme is fully responsive. On mobile, you get a hamburger menu that works smoothly. All the layouts adapt to different screen sizes - property cards stack nicely on mobile, forms are easy to fill out on any device, and nothing breaks or overflows.
+The theme has responsive breakpoints set up at 768px (mobile) and 1024px (tablet), and basic responsive styles are in place. However, mobile views still need improvement - some layouts may not be optimal on smaller screens, spacing adjustments may be needed, and some components might need refinement for better mobile UX.
 
-I made sure touch targets are big enough (at least 44px) so mobile users can actually tap things easily. The mobile menu closes when you click a link, which is a nice touch that prevents confusion.
+**Status:** Responsive structure is in place, but mobile views require additional work to ensure all pages look and function perfectly on mobile devices. Desktop and tablet views are generally working well, but mobile optimization is ongoing.
 
-### Matching the Design
+### Design Fidelity (In Progress)
 
-I spent a lot of time making sure the theme matches the Figma design. The typography uses the Urbanist font family, the color scheme matches exactly (dark theme with purple accents), spacing is consistent, and all the interactive elements have the right hover effects and transitions.
+I've worked to match the Figma design as closely as possible. The typography uses the Urbanist font family, the color scheme follows the dark theme with purple accents, and many of the design elements are in place. However, the design is not yet exactly matching the Figma design - there are still differences in spacing, layout details, and some visual elements that need to be refined to achieve pixel-perfect accuracy.
+
+**Status:** Foundation is solid and many elements match, but further refinement is needed to achieve exact Figma design fidelity. Some pages may need more work than others to match the design specifications.
 
 ---
 
@@ -252,25 +256,39 @@ The theme performs well out of the box, but there's always room for optimization
 
 ## Browser Support
 
-I tested the theme on all the major browsers:
+The theme should work on all major browsers:
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
-Everything works great across the board. The responsive design works on all of them, forms submit properly, and all the interactive elements function as expected.
+Cross-browser testing should be performed to verify compatibility once all features are fully implemented.
 
 ---
+
+## What Still Needs Work
+
+Based on current status, here are the main areas that need completion:
+
+1. **Form Submission** - Form submission functionality needs to be fully implemented. The form structures are in place, but the backend handling (email sending, validation, success/error messages) needs to be completed.
+
+2. **Design Fidelity** - While the foundation matches the Figma design, there are still differences that need to be addressed. Spacing, layout details, and some visual elements need refinement to achieve exact design match.
+
+3. **Mobile Views** - Mobile responsiveness needs improvement. Some pages may need layout adjustments, spacing tweaks, and component refinements for optimal mobile experience.
+
+4. **Cross-Browser Testing** - Once features are complete, thorough cross-browser testing should be performed.
+
+5. **Responsive Testing** - All pages should be tested across different device sizes to ensure optimal experience on all screen sizes.
 
 ## A Few Final Notes
 
 - The theme follows WordPress coding standards, so it should be easy for other developers to understand and modify
-- All user input is properly sanitized and escaped - security was a priority
-- I used WordPress nonces for form security, and all data is validated before processing
+- When forms are implemented, all user input should be properly sanitized and escaped for security
+- WordPress nonces should be used for form security, and all data should be validated before processing
 - The theme is compatible with the latest WordPress version
 - All Custom Post Types are registered in the theme itself, so the theme is completely portable
 
-If you run into any issues or have questions about how something works, feel free to reach out. The code is well-commented, so it should be pretty straightforward to understand what's happening in each file.
+The code is well-commented, so it should be pretty straightforward to understand what's happening in each file and continue development from here.
 
 ---
 
