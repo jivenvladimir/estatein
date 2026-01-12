@@ -13,3 +13,12 @@
 [11-Jan-2026 16:25:16 UTC] PHP Warning:  Undefined array key 1 in /Volumes/MacbookDataExternal/real-estate 2/app/public/wp-includes/media.php on line 1369
 [11-Jan-2026 16:25:16 UTC] PHP Warning:  Undefined array key 1 in /Volumes/MacbookDataExternal/real-estate 2/app/public/wp-includes/media.php on line 1369
 [11-Jan-2026 16:25:16 UTC] PHP Warning:  Undefined array key 1 in /Volumes/MacbookDataExternal/real-estate 2/app/public/wp-includes/media.php on line 1369
+[11-Jan-2026 16:48:57 UTC] WordPress database error Server shutdown in progress for query SELECT wp_users.ID
+				 FROM wp_users INNER JOIN wp_usermeta ON ( wp_users.ID = wp_usermeta.user_id )
+				 WHERE 1=1 AND ( 
+  ( 
+    ( wp_usermeta.meta_key = 'wp_capabilities' AND wp_usermeta.meta_value LIKE '%\"administrator\"%' )
+  )
+)
+				 ORDER BY user_login ASC
+				  made by include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/php/boot-phar.php'), include('phar:///Applications/Local.app/Contents/Resources/extraResources/bin/wp-cli/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php'), WP_CLI\bootstrap, WP_CLI\Bootstrap\LaunchRunner->process, WP_CLI\Runner->start, WP_CLI\Runner->run_command_and_exit, WP_CLI\Runner->run_command, WP_CLI\Dispatcher\Subcommand->invoke, call_user_func, WP_CLI\Dispatcher\CommandFactory::WP_CLI\Dispatcher\{closure}, call_user_func, User_Command->list_, get_users, WP_User_Query->__construct, WP_User_Query->query
